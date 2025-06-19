@@ -55,6 +55,8 @@ if ( isset($_POST["content"]) and isset($_POST["name"]) ) {
 <meta name=author content="Daniil Sorokin">
 <link rel="icon" type="image/x-icon" href="./images/favicon.ico">
 <link href="https://fonts.googleapis.com/css2?family=Didot&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/index.css">
+<link rel="stylesheet" href="css/nav.css">
 <title>Secret Chat</title>
 <script type=module>
 	// Remove the "loading…" list entry
@@ -146,39 +148,13 @@ if ( isset($_POST["content"]) and isset($_POST["name"]) ) {
 	poll_for_new_messages()
 	setInterval(poll_for_new_messages, 2000)
 </script>
-<style>
-	html { margin: 0em; padding: 0; }
-	body { height: 100vh; box-sizing: border-box; margin: 0; padding: 2em;
-		font-family: sans-serif; font-size: medium; color: #333;
-		display: flex; flex-direction: column; gap: 1em; }
-	body > h1 { flex: 0 0 auto; }
-	body > ul#messages { flex: 1 1 auto; }
-	body > form { flex: 0 0 auto; }
-	
-	h1 { margin: 0; padding: 0; font-size: 2em; }
-	
-	ul#messages { overflow: auto; margin: 0; padding: 0 3px; list-style: none; border: 1px solid gray; }
-	ul#messages li { margin: 0.35em 0; padding: 0; }
-	ul#messages li small { display: block; font-size: 0.59em; color: gray; }
-	ul#messages li.pending { color: #aaa; }
-	
-	form { font-size: 1em; margin: 0; padding: 0; }
-	form p { margin: 0; padding: 0; display: flex; gap: 0.5em; }
-	form p input { font-size: 1em; min-width: 0; }
-	form p input[name=name] { flex: 0 1 10em; }
-	form p input[name=content] { flex: 1 1 auto; }
-	form p button {}
-	
-	h1, ul#messages, form { width: 100%; max-width: 40rem; box-sizing: border-box; margin: 0 auto; box-shadow: none; }
-
-	.foot-text { margin: 0 3px; width: 100%; }
-
-	footer { color: #666; }
-
-	a { color: #40659b; }
-</style>
 
 <h1>Secret Chat</h1>
+
+<div class="topnav">
+	<a class="active" href="index.php">Home</a>
+	<a href="info.php">Info</a>
+</div>
 
 <ul id=messages>
 	<li>loading…</li>
