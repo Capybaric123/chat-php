@@ -9,7 +9,7 @@
 $messages_buffer_file = "messages.json";
 // Number of most recent messages kept in the buffer.
 // Note that message list on clients only shows 1000 messages to avoid slowdown (see JavaScript code below).
-$messages_buffer_size = 50;
+$messages_buffer_size = 200;
 // Disabled by default, set to true to enable. Appends each chat messages to a chatlog.txt text file.
 // This log file is uncapped, so you have to clean it form time to time or it can get very large.
 $enable_chatlog = true;
